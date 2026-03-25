@@ -432,49 +432,49 @@ Exercicio 24
 Crie um mini banco com múltiplas contas e permita transferências entre elas.
 */
 
-class ContaBancaria {
-  constructor(titular, saldoInicial = 0) {
-    this.titular = titular;
-    this.saldo = saldoInicial;
-    this.numero = Math.floor(Math.random() * 10000);
-  }
+// class ContaBancaria {
+//   constructor(titular, saldoInicial = 0) {
+//     this.titular = titular;
+//     this.saldo = saldoInicial;
+//     this.numero = Math.floor(Math.random() * 10000);
+//   }
 
-  depositar(valor) {
-    if (valor > 0) {
-      this.saldo += valor;
-      console.log(`${this.titular}: Depósito de R$${valor} realizado. Novo saldo: R$${this.saldo}`);
-    }
-  }
+//   depositar(valor) {
+//     if (valor > 0) {
+//       this.saldo += valor;
+//       console.log(`${this.titular}: Depósito de R$${valor} realizado. Novo saldo: R$${this.saldo}`);
+//     }
+//   }
 
-  sacar(valor) {
-    if (valor > 0 && valor <= this.saldo) {
-      this.saldo -= valor;
-      console.log(`${this.titular}: Saque de R$${valor} realizado. Novo saldo: R$${this.saldo}`);
-      return true;
-    } else {
-      console.log(`${this.titular}: Saldo insuficiente ou valor inválido.`);
-      return false;
-    }
-  }
+//   sacar(valor) {
+//     if (valor > 0 && valor <= this.saldo) {
+//       this.saldo -= valor;
+//       console.log(`${this.titular}: Saque de R$${valor} realizado. Novo saldo: R$${this.saldo}`);
+//       return true;
+//     } else {
+//       console.log(`${this.titular}: Saldo insuficiente ou valor inválido.`);
+//       return false;
+//     }
+//   }
 
-  transferir(valor, contaDestino) {
-    console.log(`\n--- Tentando transferência de ${this.titular} para ${contaDestino.titular} ---`);
-    if (this.sacar(valor)) {
-      contaDestino.depositar(valor);
-      console.log("Transferência concluída com sucesso.");
-    }
-  }
-}
+//   transferir(valor, contaDestino) {
+//     console.log(`\n--- Tentando transferência de ${this.titular} para ${contaDestino.titular} ---`);
+//     if (this.sacar(valor)) {
+//       contaDestino.depositar(valor);
+//       console.log("Transferência concluída com sucesso.");
+//     }
+//   }
+// }
 
 
-const conta1 = new ContaBancaria("Ana", 1000);
-const conta2 = new ContaBancaria("Bruno", 500);
+// const conta1 = new ContaBancaria("Ana", 1000);
+// const conta2 = new ContaBancaria("Bruno", 500);
 
-conta1.depositar(200);
-conta2.sacar(100);
+// conta1.depositar(200);
+// conta2.sacar(100);
 
-conta1.transferir(300, conta2);
+// conta1.transferir(300, conta2);
 
-console.log("\n--- Saldos Finais ---");
-console.log(conta1);
-console.log(conta2);
+// console.log("\n--- Saldos Finais ---");
+// console.log(conta1);
+// console.log(conta2);
